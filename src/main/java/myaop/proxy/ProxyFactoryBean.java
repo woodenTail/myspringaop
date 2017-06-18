@@ -1,7 +1,6 @@
-package myaop;
+package myaop.proxy;
 
 import myaop.advisior.Advisor;
-import myaop.proxy.AopProxy;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class ProxyFactoryBean {
 
     List<Advisor>    advisors;
 
-    Object getProxy(AopProxy proxy) {
+    public Object getProxy(AopProxy proxy) {
         return proxy.getProxy();
     }
 }

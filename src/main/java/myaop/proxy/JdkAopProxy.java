@@ -1,7 +1,6 @@
 package myaop.proxy;
 
 import myaop.advisior.Advisor;
-import myaop.TargetSource;
 import myaop.joinpoint.MethodInvocation;
 import myaop.joinpoint.ReflectiveMethodInvocation;
 
@@ -36,30 +35,6 @@ public class JdkAopProxy implements AopProxy, InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        List<Advisor> advisors = getAdvisors();
-        List<Advisor>beforeAdvisors = new ArrayList<>();
-        /*List<Advisor>afterAdvisiors = new ArrayList<>();
-
-        for(Advisor advisor : advisors){
-            if(advisor.getAdvice() instanceof BeforeAdvice){
-                beforeAdvisors.add(advisor);
-            }
-            if(advisor.getAdvice() instanceof AfterAdvice){
-                afterAdvisiors.add(advisor);
-            }
-        }
-         for(Advisor advisor : beforeAdvisors){
-            BeforeAdvice advice = (BeforeAdvice) advisor.getAdvice();
-            advice.before(method, args, targetSource.getTarget());
-        }
-
-        method.invoke(targetSource.getTarget(), args);
-
-        for(Advisor advisor : afterAdvisiors){
-            AfterAdvice advice = (AfterAdvice) advisor.getAdvice();
-            advice.after(method, args, targetSource.getTarget());
-        }*/
-
 
         MethodInvocation invocation = new ReflectiveMethodInvocation(proxy, targetSource.getTarget(), method, args,
                                                                      targetSource.getTargetClassType(), getAdvisors());

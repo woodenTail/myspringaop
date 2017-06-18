@@ -1,6 +1,6 @@
 package myaop.advisior;
 
-import myaop.PointCut;
+import myaop.pointcut.PointCut;
 import myaop.advice.Advice;
 
 /**

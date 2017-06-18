@@ -1,4 +1,4 @@
-package myaop.bussiness;
+package myaop.service;
 
 import org.springframework.stereotype.Service;
 

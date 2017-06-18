@@ -1,7 +1,6 @@
 package myaop.proxy;
 
 import myaop.advisior.Advisor;
-import myaop.TargetSource;
 
 import java.util.List;
 

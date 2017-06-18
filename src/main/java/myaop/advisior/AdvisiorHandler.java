@@ -1,8 +1,7 @@
 package myaop.advisior;
 
-import myaop.PointCut;
+import myaop.pointcut.PointCut;
 import myaop.advice.Advice;
-import myaop.joinpoint.MethodInvocation;
 
 /**
  * @author 木鸢

@@ -1,12 +1,8 @@
 package myaop.advisior;
 
-import myaop.PointCut;
-import myaop.advice.Advice;
-import myaop.advice.AfterAdvice;
+import myaop.pointcut.PointCut;
 import myaop.advice.BeforeAdvice;
 import myaop.joinpoint.MethodInvocation;
-
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author 木鸢

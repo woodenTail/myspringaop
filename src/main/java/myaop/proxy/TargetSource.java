@@ -1,4 +1,4 @@
-package myaop;
+package myaop.proxy;
 
 /**
  * @author 木鸢
