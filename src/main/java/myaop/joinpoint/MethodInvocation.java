@@ -1,5 +1,6 @@
 package myaop.joinpoint;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -11,4 +12,6 @@ public interface MethodInvocation extends Joinpoint {
     Method getMethod();
 
     Object[] getArguments();
+
+    Object invokeJoinpoint() throws Exception;
 }

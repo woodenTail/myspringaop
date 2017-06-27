@@ -16,8 +16,6 @@ public class MethodBeforeAdvice extends AbstractAdvice implements BeforeAdvice{
 
     @Override
     public void before(Method method, Object obj, Object target) throws InvocationTargetException, IllegalAccessException {
-
         getAspectJAdviceMethod().invoke(getAspectBean());
-
     }
 }

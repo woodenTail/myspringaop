@@ -17,10 +17,10 @@ public class Main {
         <aop:config proxy-target-class="true"></aop:config>*/
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("aop-schema.xml");
-       /* TestAop testAop = (TestAop) context.getBean("testAop");
-		testAop.testAop();*/
+        TestAop testAop = (TestAop) context.getBean("testAop");
+		testAop.testAop();
 
-        TestAopApi testAopApi = (TestAopApi) context.getBean("testAopApi");
-        testAopApi.testAop();
+       /* TestAopApi testAopApi = (TestAopApi) context.getBean("testAopApi");
+        testAopApi.testAop();*/
     }
 }

@@ -41,19 +41,19 @@ public class ReflectiveMethodInvocation implements MethodInvocation{
 
     @Override
     public Method getMethod() {
-        return null;
+        return method;
     }
 
     @Override
     public Object[] getArguments() {
-        return new Object[0];
+        return arguments;
     }
 
     @Override
-    public Object proceed() throws Exception{
+    public Object proceed() throws Exception {
         currentAdvisorIndex ++;
         if(currentAdvisorIndex == (advisors.size()) ){
-            return method.invoke(target, arguments);
+            return invokeJoinpoint();
         }
 
         Advisor advisor = advisors.get(currentAdvisorIndex);
@@ -61,5 +61,8 @@ public class ReflectiveMethodInvocation implements MethodInvocation{
         return null;
     }
 
-
+    @Override
+    public Object invokeJoinpoint() throws Exception {
+        return method.invoke(target, arguments);
+    }
 }
